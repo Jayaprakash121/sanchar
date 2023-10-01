@@ -42,7 +42,6 @@ section {
   width: 90vw;
   margin-bottom: 5vh;
   padding: min(5vw, 5vh);
-
   > h2 {
     color: #71835c;
     font-size: max(3vh, 3vw);
@@ -141,6 +140,9 @@ section {
     font-size: max(2.5vh, 2vw);
     margin-left: 2.5%;
   }
+  @media screen and (min-width: 1000px) {
+    padding-left: 15vw;
+  }
   > #circles {
     display: flex;
     width: 100%;
@@ -201,7 +203,7 @@ section {
   border-radius: 10px;
   color: #fff;
   height: fit-content;
-  
+  padding-left: 3.5%;
   @media screen and (min-width: 1000px) {
     align-items: center;
     width: 40vw;
@@ -355,4 +357,48 @@ hr {
 
 ul#sy {
   list-style: none;
+}
+button#home {
+  /* Variables */
+  --button_radius: 1.5em;
+  --button_color: #faf1e4;
+  --button_outline_color: #435334;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  backdrop-filter: scaleX(0.7);
+  padding: 0;
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button#home:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button#home:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+section.last_btns {
+  padding: 5%;
+}
+
+section#first {
+  padding: 0;
+  padding-bottom: 0.5vh;
 }

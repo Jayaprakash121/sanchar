@@ -211,6 +211,8 @@ section#contactus {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  justify-self: center;
 }
 .icon img {
   width: 30px;
@@ -385,7 +387,7 @@ article {
 
 .title {
   text-transform: uppercase;
-  font-size: max(2.2vh,2vw);
+  font-size: max(2.2vh, 2vw);
   margin-top: 10px;
 }
 
@@ -523,8 +525,7 @@ article {
         margin-top: 5vh;
       }
       .data,
-      ul,
-      .sc-icons {
+      ul {
         display: flex;
         flex-direction: column;
         height: fit-content;
@@ -536,12 +537,14 @@ article {
       > ul > li {
         margin: 2% 0;
       }
-      .sc-icons {
-        flex-direction: row;
-      }
     }
   }
-
+  .sc-icons {
+    flex-direction: row;
+    display: flex;
+    height: fit-content;
+    width: 80vw;
+  }
   .disappear {
     display: none;
   }
@@ -614,8 +617,7 @@ article {
         margin-top: 10vh;
       }
       .data,
-      ul,
-      .sc-icons {
+      ul {
         display: flex;
         flex-direction: column;
         height: fit-content;
@@ -630,7 +632,9 @@ article {
     }
   }
   .sc-icons {
-    flex-direction: column;
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
   }
 
   .carou,
@@ -641,13 +645,6 @@ article {
     left: 15%;
   }
 
-  .cnt {
-    display: flex;
-    width: 15vw;
-    min-width: 250px;
-    justify-content: space-between;
-    margin: 5%;
-  }
   .icon--facebook {
     color: rgb(40, 85, 182);
     font-size: 30px;
@@ -708,4 +705,19 @@ article {
     outline-color: rgb(40, 85, 182);
     color: white;
   }
+}
+
+article#social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: 90vw;
+  padding: 5%;
+  @media (min-width:1000px) {
+    padding-left: 10vw;
+  }
+}
+.sc-icons{
+  margin:  5% 0 ;
 }
