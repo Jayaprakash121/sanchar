@@ -2,7 +2,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+/* body{
+  background-color: black;
+} */
 body,
 html,
 head {
@@ -203,6 +205,7 @@ section {
   border-radius: 10px;
   color: #fff;
   height: fit-content;
+  align-items: center;
   padding-left: 3.5%;
   @media screen and (min-width: 1000px) {
     align-items: center;
